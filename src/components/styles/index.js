@@ -137,3 +137,59 @@ export const StyledVisualImg = styled.img`
   width: 100%;
   height: 100%;
 `;
+
+//ABOUT US, CONTACT US & WORKING HOURS
+
+export const StyledDataContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const StyledAboutAndContact = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+`;
+
+export const StyledA = styled.a`
+  text-decoration: none;
+  color: black;
+`;
+
+//TEAM
+
+export const StyledTeamContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: baseline;
+`;
+
+export const StyledTeamMembersContainer = styled.div`
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: baseline;
+`;
+
+export const StyledTeamMember = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const StyledTeamMemberImgContainer = styled.div`
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: whitesmoke;
+  overflow: hidden;
+`;
+
+export const StyledAvatar = styled.img`
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+`;
