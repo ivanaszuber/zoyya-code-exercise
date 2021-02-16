@@ -22,6 +22,14 @@ const LocationDetails = ({ location }) => {
       <p>{description}</p>
       <p>{email}</p>
       <p>{mobilePhone}</p>
+      {location.workShifts[0].openHours.map((data) => (
+        <p key={data.day}>
+          {data.dayName} {data.startTime} {data.endTime}
+        </p>
+      ))}
+      {location.teamMembers.map((data) => (
+        <p key={data.id}>{data.name}</p>
+      ))}
     </div>
   );
 };
