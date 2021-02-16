@@ -2,6 +2,7 @@ import "./App.css";
 import locations from "./database/locations.json";
 import React, { useState } from "react";
 import SingleLocation from "./components/SingleLocation";
+import LocationDetails from "./components/LocationDetails";
 import { StyledLocationsListContainer } from "./components/styles";
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
           </div>
         ))
       ) : (
-        <div>...INSERT SELECTED LOCATION DATA HERE...</div>
+        <LocationDetails location={selectedLocation} />
       )}
       {!!selectedLocation && (
         <div onClick={() => setSelectedLocation(null)}>{"<- BACK"}</div>
