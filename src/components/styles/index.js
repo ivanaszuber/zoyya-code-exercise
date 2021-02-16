@@ -66,3 +66,74 @@ export const StyledLocationsListContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-evenly;
 `;
+
+// LOCATION DETAIL STYLES
+
+export const StyledLocationDetailsContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px 60px;
+`;
+
+export const StyledVisualsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 300px;
+  width: 100%;
+`;
+
+export const StyledDescriptionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 45%;
+  height: 100%;
+  background-color: lightgray;
+`;
+
+export const StyledDetailsContainer = styled.div`
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 0 50px;
+  margin-right: 20px;
+  h2 {
+    margin-bottom: 0;
+  }
+  p {
+    margin-bottom: 0;
+  }
+`;
+
+export const StyledButton = styled.div`
+  height: 40px;
+  width: 250px;
+  border-radius: 5px;
+  color: white;
+  background-color: blue;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`;
+
+export const StyledVisualImgContainer = styled.div`
+  height: 100%;
+  width: 55%;
+  position: relative;
+`;
+
+export const StyledVisualImg = styled.img`
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+`;
