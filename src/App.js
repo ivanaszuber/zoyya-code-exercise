@@ -2,11 +2,12 @@ import "./App.css";
 import locations from "./database/locations.json";
 import React, { useState } from "react";
 import SingleLocation from "./components/SingleLocation";
+import { StyledLocationsListContainer } from "./components/styles";
 
 function App() {
   const [selectedLocation, setSelectedLocation] = useState(null);
   return (
-    <div className="App">
+    <StyledLocationsListContainer>
       {!selectedLocation ? (
         locations.map((location) => (
           <div onClick={() => setSelectedLocation(location)}>
@@ -19,7 +20,7 @@ function App() {
       {!!selectedLocation && (
         <div onClick={() => setSelectedLocation(null)}>{"<- BACK"}</div>
       )}
-    </div>
+    </StyledLocationsListContainer>
   );
 }
 
