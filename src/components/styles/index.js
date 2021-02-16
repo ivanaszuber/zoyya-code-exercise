@@ -3,8 +3,8 @@ import styled from "styled-components";
 // SINGLE LOCATION CARD STYLES
 
 export const StyledLocationCardContainer = styled.div`
-  height: 310px;
-  width: 200px;
+  height: 320px;
+  width: 220px;
   margin: 10px;
   overflow: hidden;
   border-radius: 5px;
@@ -14,6 +14,8 @@ export const StyledLocationCardContainer = styled.div`
   box-shadow: 0px 1px 2px 0px purple;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  position: relative;
   cursor: pointer;
 `;
 
@@ -26,9 +28,11 @@ export const StyledLocationCardContent = styled.div`
 
 export const StyledImgContainer = styled.div`
   height: 220px;
+  position: relative;
 `;
 
 export const StyledImg = styled.img`
+  object-fit: cover;
   width: 100%;
   height: 100%;
 `;
@@ -60,6 +64,5 @@ export const StyledLocationsListContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-evenly;
 `;
