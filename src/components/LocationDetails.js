@@ -24,7 +24,13 @@ const LocationDetails = ({ location }) => {
       <p>{mobilePhone}</p>
       {location.workShifts[0].openHours.map((data) => (
         <p key={data.day}>
-          {data.dayName} {data.startTime} {data.endTime}
+          {!data.dayOff ? (
+            <p>
+              {data.dayName} {data.startTime} {data.endTime}
+            </p>
+          ) : (
+            <p>{data.dayName} Zatvoreno</p>
+          )}
         </p>
       ))}
       {location.teamMembers.map((data) => (
