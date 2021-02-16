@@ -11,7 +11,7 @@ function App() {
     <StyledLocationsListContainer>
       {!selectedLocation ? (
         locations.map((location) => (
-          <div onClick={() => setSelectedLocation(location)}>
+          <div onClick={() => setSelectedLocation(location)} key={location.id}>
             <SingleLocation location={location} />
           </div>
         ))

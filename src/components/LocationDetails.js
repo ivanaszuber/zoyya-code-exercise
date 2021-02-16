@@ -77,7 +77,7 @@ const LocationDetails = ({ location }) => {
         <div>
           <h2>Working hours</h2>
           {location.workShifts[0].openHours.map((data) => (
-            <p key={data.day}>
+            <div key={data.day}>
               {!data.dayOff ? (
                 <p>
                   {data.dayName} {data.startTime} {data.endTime}
@@ -85,7 +85,7 @@ const LocationDetails = ({ location }) => {
               ) : (
                 <p>{data.dayName} Zatvoreno</p>
               )}
-            </p>
+            </div>
           ))}
         </div>
       </StyledDataContainer>
@@ -93,7 +93,7 @@ const LocationDetails = ({ location }) => {
         <h2>Our team</h2>
         <StyledTeamMembersContainer>
           {location.teamMembers.map((data) => (
-            <StyledTeamMember>
+            <StyledTeamMember key={data.id}>
               <StyledTeamMemberImgContainer>
                 <StyledAvatar src={data.user.avatarUrl} alt={data.name} />
               </StyledTeamMemberImgContainer>
