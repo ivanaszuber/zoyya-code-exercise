@@ -193,3 +193,33 @@ export const StyledAvatar = styled.img`
   width: 100%;
   height: 100%;
 `;
+
+// NAVBAR STYLES
+
+export const StyledNavbar = styled.div`
+  background-color: lightgray;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+`;
+
+export const StyledNavLogo = styled.div`
+  cursor: pointer;
+  margin-left: 20px;
+`;
+
+export const StyledNavbarItems = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  width: 50%;
+`;
