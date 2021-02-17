@@ -1,4 +1,5 @@
 .navigation{
+  position: sticky;
     height: 6rem;
     background-color: #7069b0;
     font-family: "Work Sans", sans-serif;

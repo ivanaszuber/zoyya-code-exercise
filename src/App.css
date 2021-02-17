@@ -1,7 +1,19 @@
 .App {
   text-align: center;
- 
- 
+  background-color: black;
+}
+
+.btn-back{
+  position: fixed;
+  margin: 2rem;
+  bottom: 0px;
+  right: 0px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  background-color:#7069b0;
+  color: #ffffff;
+  padding: 1.6rem;
 }
 
 
