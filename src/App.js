@@ -2,13 +2,16 @@ import './App.css';
 import locations from './database/locations.json';
 import React, { useState } from 'react';
 import LocationsList from './components/LocationsList';
+import Navigation from './components/Navigation';
 
 function App() {
   const [selectedLocation, setSelectedLocation] = useState(null)
 
   /*{/*<div onClick={()=>setSelectedLocation(location)}>{location.name}</div>*/
   return (
+   
     <div className="App">
+       <Navigation/>
       <div className="container">
         <div className="row">
       {!selectedLocation ?

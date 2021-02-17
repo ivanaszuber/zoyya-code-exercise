@@ -1,0 +1,12 @@
+.navigation{
+    height: 6rem;
+    background-color: #7069b0;
+    font-family: "Work Sans", sans-serif;
+    padding: 1.2rem;
+}
+
+.navigation-title{
+    text-align: left;
+    font-size: 3.2rem;
+    color: #ffffff;
+}
