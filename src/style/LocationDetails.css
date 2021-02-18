@@ -39,6 +39,7 @@
   color: white;
   padding: 1.6rem;
   margin-top: 2rem;
+  border-bottom: 1px solid #ffffff;
 }
 .location-description-content {
   font-size: 1.7rem;
@@ -61,7 +62,8 @@
   background-size: cover;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.8);
-  margin: 2rem;
+  margin-top: 1rem;
+  margin-left: 0.9rem;
 }
 
 .member-name {
@@ -74,6 +76,6 @@
   padding: 1.2rem;
   letter-spacing: -0.93px;
   color: #000000;
-  background-color:rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   border-radius: 1rem;
 }

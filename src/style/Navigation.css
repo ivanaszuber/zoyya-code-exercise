@@ -1,13 +1,24 @@
-.navigation{
-  position: sticky;
-    height: 6rem;
-    background-color: #7069b0;
-    font-family: "Work Sans", sans-serif;
-    padding: 1.2rem;
+.navigation-wraper {
+  position: fixed;
+  width: 100%;
+  background-color: #7069b0;
+  font-family: "Work Sans", sans-serif;
+  padding: 0.5rem;
+  left: 0;
+  top: 0;
+  backface-visibility: hidden;
+  z-index: 999;
 }
 
-.navigation-title{
-    text-align: left;
-    font-size: 3.2rem;
-    color: #ffffff;
+.navigation-title {
+  text-align: left;
+  font-size: 3.2rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.navigation-c {
+  height: 5.2rem !important;
+  position: relative;
+  top: 1rem;
 }

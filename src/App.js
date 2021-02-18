@@ -1,18 +1,19 @@
-import "./App.css";
 import locations from "./database/locations.json";
 import React, { useState } from "react";
 import LocationsList from "./components/LocationsList";
 import Navigation from "./components/Navigation";
 import LocationDetails from "./components/LocationDetails";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.rtl.min.css";
 
 function App() {
   const [selectedLocation, setSelectedLocation] = useState(null);
+
+
   return (
- 
-   
     <div className="App">
-    <Navigation />
-      <div className="container">
+      <Navigation />
+      <div className="container move-down">
         <div className="row">
           {!selectedLocation ? (
             locations.map((location) => (
@@ -22,9 +23,9 @@ function App() {
               />
             ))
           ) : (
-            <LocationDetails dataLocation={selectedLocation} />
-          )}
-       
+              <LocationDetails dataLocation={selectedLocation} />
+            )}
+
         </div>
       </div>
       {!!selectedLocation && (
@@ -33,7 +34,7 @@ function App() {
         </div>
       )}
     </div>
-    
+
   );
 }
 

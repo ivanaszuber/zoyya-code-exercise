@@ -1,9 +1,7 @@
 .location-item {
-  /*background-color: #7069b0;*/
   margin: 0.5rem;
   border: 1px solid #7069b0;
   border-radius: 1rem;
- 
   cursor: pointer;
 }
 .location-item-image {
@@ -29,14 +27,11 @@
   font-size: 1.35rem;
   font-weight: 200;
   font-family: "Work Sans", sans-serif;
- 
 }
 
 .item-content {
-  color:#ffffff;
-  height: 23rem;
+  color: #ffffff;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  overflow: hidden;
 }
-
-
