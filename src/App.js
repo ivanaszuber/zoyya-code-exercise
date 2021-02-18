@@ -12,7 +12,7 @@ function App() {
     <div className='App'>
       <div className='container'>
         {!selectedLocation ? (
-          <div className='cards' onClick={() => setSelectedLocation(locations)}>
+          <div className='cards' onClick={() => setSelectedLocation(locations)}> 
             <LocationsList />
           </div>
         ) : (
