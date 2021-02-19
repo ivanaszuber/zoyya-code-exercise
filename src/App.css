@@ -34,6 +34,7 @@
   box-sizing: border-box;
 }
 
+
 .card {
   position: relative;
   margin-right: 20px;
@@ -148,6 +149,7 @@ li {
 @media (min-width: 700px) {
   .card {
     max-width: 320px;
+    margin: 1em 1em;
   }
 }
 @media (min-width: 980px) {
