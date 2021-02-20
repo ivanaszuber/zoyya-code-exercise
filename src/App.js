@@ -1,18 +1,27 @@
-import './App.css';
-import locations from './database/locations.json';
-import React, { useState } from 'react';
+import "./App.css";
+import locations from "./database/locations.json";
+import React, { useState } from "react";
+import SingleLocation from "./components/SingleLocation";
+import LocationDetails from "./components/LocationDetails";
+import { StyledLocationsListContainer } from "./components/styles";
 
 function App() {
-  const [selectedLocation, setSelectedLocation] = useState(null)
+  const [selectedLocation, setSelectedLocation] = useState(null);
   return (
-    <div className="App">
-      {!selectedLocation ?
-        locations.map(location =>  <div onClick={()=>setSelectedLocation(location)}>{location.name}</div>)
-       : <div>
-          ...INSERT SELECTED LOCATION DATA HERE...
-        </div>}
-      {!!selectedLocation &&  <div onClick={()=>setSelectedLocation(null)}>{"<- BACK"}</div>}
-    </div>
+    <StyledLocationsListContainer>
+      {!selectedLocation ? (
+        locations.map((location) => (
+          <div onClick={() => setSelectedLocation(location)} key={location.id}>
+            <SingleLocation location={location} />
+          </div>
+        ))
+      ) : (
+        <LocationDetails location={selectedLocation} />
+      )}
+      {!!selectedLocation && (
+        <div onClick={() => setSelectedLocation(null)}>{"<- BACK"}</div>
+      )}
+    </StyledLocationsListContainer>
   );
 }
 
