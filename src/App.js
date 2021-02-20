@@ -1,18 +1,40 @@
-import './App.css';
-import locations from './database/locations.json';
-import React, { useState } from 'react';
+import locations from "./database/locations.json";
+import React, { useState } from "react";
+import LocationsList from "./components/LocationsList";
+import Navigation from "./components/Navigation";
+import LocationDetails from "./components/LocationDetails";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.rtl.min.css";
 
 function App() {
-  const [selectedLocation, setSelectedLocation] = useState(null)
+  const [selectedLocation, setSelectedLocation] = useState(null);
+
+
   return (
     <div className="App">
-      {!selectedLocation ?
-        locations.map(location =>  <div onClick={()=>setSelectedLocation(location)}>{location.name}</div>)
-       : <div>
-          ...INSERT SELECTED LOCATION DATA HERE...
-        </div>}
-      {!!selectedLocation &&  <div onClick={()=>setSelectedLocation(null)}>{"<- BACK"}</div>}
+      <Navigation />
+      <div className="container move-down">
+        <div className="row">
+          {!selectedLocation ? (
+            locations.map((location) => (
+              <LocationsList
+                data={location}
+                modal={() => setSelectedLocation(location)}
+              />
+            ))
+          ) : (
+              <LocationDetails dataLocation={selectedLocation} />
+            )}
+
+        </div>
+      </div>
+      {!!selectedLocation && (
+        <div className="btn-back" onClick={() => setSelectedLocation(null)}>
+          {"BACK"}
+        </div>
+      )}
     </div>
+
   );
 }
 
