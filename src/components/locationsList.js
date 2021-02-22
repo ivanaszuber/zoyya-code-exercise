@@ -1,31 +1,32 @@
-import React, { Component } from "react";
-import locations from "../database/locations.json";
+import React from "react";
 
-class LocationsList extends Component {
-  render() {
-    return locations.map((location, index) => (
-      <div className='card' key={index}>
+// https://reactjs.org/docs/state-and-lifecycle.html
+function LocationsList(props) {
+  return (
+    <div onClick={props.details}>
+      <div className='card' key={props.location.id}>
         <span className='card-header'>
-          <img src={location.imageUrl} alt={location.name} />
+          <img src={props.location.imageUrl} alt={props.location.name} />
           <span className='card-title'>
-            <h3>{location.name}</h3>
+            <h3>{props.location.name}</h3>
           </span>
         </span>
         <span className='card-summary'>
-          <p>{location.category}</p>
+          <p>{props.location.category}</p>
         </span>
         <span className='card-summary'>
-          <p>{location.address}</p>
+          <p>{props.location.address}</p>
         </span>
         <span className='card-summary'>
-          <p>{location.city}</p>
+          <p>{props.location.city}</p>
         </span>
         <span className='card-meta'>See Location</span>
       </div>
-    ));
-  }
+    </div>
+  );
 }
-
 export default LocationsList;
+
+
 
 
