@@ -1,7 +1,7 @@
 import './App.css';
 import locations from './database/locations.json';
 import React, { useState } from 'react';
-import { Location } from './Locations';
+import { Location } from './Location';
 
 function App() {
   const [selectedLocation, setSelectedLocation] = useState(null)
